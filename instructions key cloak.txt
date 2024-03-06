@@ -26,17 +26,19 @@ concepts of keycloak:-
 
 
 
-instructions:-
+Instructions:-
 https://www.youtube.com/watch?v=x3ux2JM1Bxk
-create a dockerfile
-then run the command
-docker build -t keycloak-app .
 
+create docker instance for keycloak:-
+docker build -t keycloak-app 
 
-starter
+starter:
+make changes in the starter and then build it
 npm run build-keycloak-theme
 
-main docker mai:-
+
+for the dockerfile :-
+run the commands below to incorporate the starter into the keycloak instance under docker :-
 docker build -t keycloak-app .
 docker run -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin -p 8080:8080 keycloak-app
 
