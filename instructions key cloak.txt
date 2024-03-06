@@ -1,3 +1,21 @@
+Instructions:-
+https://www.youtube.com/watch?v=x3ux2JM1Bxk
+
+create docker instance for keycloak:-
+docker build -t keycloak-app 
+
+starter:
+make changes in the starter and then build it
+npm run build-keycloak-theme
+
+
+for the dockerfile :-
+run the commands below to incorporate the starter into the keycloak instance under docker :-
+docker build -t keycloak-app .
+docker run -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin -p 8080:8080 keycloak-app
+
+
+
 Key cloak
 SSO architecture : identity provider , service provider, user
 https://www.linkedin.com/pulse/understanding-single-sign-on-sso-architecture-indra-nand-jha#:~:text=Published%20Mar%2023%2C%202023,remembering%20multiple%20usernames%20and%20passwords.
@@ -26,19 +44,5 @@ concepts of keycloak:-
 
 
 
-Instructions:-
-https://www.youtube.com/watch?v=x3ux2JM1Bxk
 
-create docker instance for keycloak:-
-docker build -t keycloak-app 
-
-starter:
-make changes in the starter and then build it
-npm run build-keycloak-theme
-
-
-for the dockerfile :-
-run the commands below to incorporate the starter into the keycloak instance under docker :-
-docker build -t keycloak-app .
-docker run -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin -p 8080:8080 keycloak-app
 
